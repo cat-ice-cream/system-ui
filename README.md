@@ -1,4 +1,4 @@
-# kitty-ui
+# system-ui
 
 ## Project setup
 ```
