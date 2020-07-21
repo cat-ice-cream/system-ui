@@ -21,5 +21,17 @@ module.exports = {
             .end()
             .use("babel")
             .loader("babel-loader");
+        // 配置 vue-markdown-loader
+        config.module
+            .rule("md")
+            .test(/\.md/)
+            .use("vue-loader")
+            .loader("vue-loader")
+            .end()
+            .use("vue-markdown-loader")
+            .loader("vue-markdown-loader/lib/markdown-compiler")
+            .options({
+                raw: true
+              });
     },
 }
